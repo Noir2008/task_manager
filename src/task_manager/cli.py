@@ -2,12 +2,11 @@ from .services import add_task, get_tasks_by_status, sort_tasks
 from .storage import save_task, load_task
 from .utils import validate_tasks
 
-
 FILENAME = "data.json"
 
 
 def run_cli():
-    tasks =load_task(FILENAME)
+    tasks = load_task(FILENAME)
 
     while True:
         print("\n=== TASK MANAGER ===")
@@ -56,6 +55,7 @@ def run_cli():
 
         else:
             print("Ошибка ввода")
+
 
 if __name__ == "__main__":
     run_cli()

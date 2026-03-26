@@ -14,7 +14,8 @@ def get_tasks_by_status(tasks: list, status: str = "new") -> list:
             result.append(task)
     return result
 
-def sort_tasks(tasks:list, reverse: bool = False) -> list:
+
+def sort_tasks(tasks: list, reverse: bool = False) -> list:
     tasks_copy = tasks[:]
 
     for i in range(len(tasks_copy)):

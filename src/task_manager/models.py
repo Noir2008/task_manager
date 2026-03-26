@@ -5,11 +5,7 @@ class Task:
         self.status = status
 
     def to_dict(self) -> dict:
-        return {
-            "id": self.id,
-            "title": self.title,
-            "status": self.status
-        }
+        return {"id": self.id, "title": self.title, "status": self.status}
 
     def from_dict(self, data: dict):
         self.id = data["id"]
@@ -18,5 +14,4 @@ class Task:
         return self
 
     def __str__(self):
-        # return f"Task(id={self.id}, title={self.title}, status={self.status})"
         return f"[{self.id}] {self.title} ({self.status})"
